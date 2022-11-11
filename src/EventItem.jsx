@@ -11,15 +11,17 @@ class EventItem extends Component {
             dayText = this.props.source.day,
             yearText = this.props.source.year,
             startTimeText = this.props.source.startTime,
-            endTimeText = this.props.source.endTime;
+            endTimeText = this.props.source.endTime,
+            descriptionText = this.props.source.description;
 
         return (
-            <div style={{border: '0.5px solid black',
-                         
-            }}>
-                <h4>{this.props.source.title} {this.props.source.week}</h4>
-                <p>{monthText} {dayText}, {yearText} {startTimeText} - {endTimeText}</p>
-                <p></p>
+            <div className='event-item'>
+                <div className='vertical-tag'></div>
+                <div className='contents'>
+                    <h4>{titleText}</h4>
+                    <p>{monthText} {dayText}, {yearText} {startTimeText} - {endTimeText}</p>
+                    <p class='description'>{descriptionText}</p>
+                </div>
             </div>
         )
     }

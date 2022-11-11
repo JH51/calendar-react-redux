@@ -6,9 +6,20 @@ class AllView extends Component {
 
     render() {
 
+        if (this.props.divClass == 'week-header') {
+            return (
+                <div id={this.props.divId} 
+                    className={`day-container ${this.props.divClass}`}
+                >
+                    <p class={this.props.divClass}>
+                        {this.props.innerText}
+                    </p>
+                </div>
+        )}
+
         const eventsList = [];
         if (this.props.eventsList !== undefined) {
-            console.log(this.props.eventsList);
+            // console.log(this.props.eventsList);
             for (const event of this.props.eventsList) {
                 eventsList.push(
                     <EventItem source={event} />
@@ -18,9 +29,8 @@ class AllView extends Component {
 
         return (
             <div id={this.props.divId} 
-                 className={`container-day ${this.props.divClass}`}
-                 style={{border: '0.5px solid red'
-                 }}>
+                 className={`day-container ${this.props.divClass}`}
+            >
                 {this.props.innerText}
                 {eventsList}
             </div>

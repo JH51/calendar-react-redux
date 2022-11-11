@@ -1,3 +1,42 @@
-.header {
-    background-color: blanchedalmond;
+#grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.75fr repeat(7, 1fr);
+    div {
+        // border: 0.5px solid gray;
+    }
+}
+
+div.week-header {
+    background-color: #FAFAFA;
+    // align-items: center;
+}
+
+p.week-header {
+    align-self: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.header * {
+    align-self: center;
+}
+
+.event-item {
+    color: #0A0A0A;
+    display: flex;
+    flex-direction: row;
+    background-color: salmon;
+}
+
+.description {
+    color: #1A1A1A;
+}
+
+.vertical-tag {
+    position: relative;
+    width: 10px;
+    background-color: red;
+    opacity: 0.25;
+    // height: 100%;
 }

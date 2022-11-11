@@ -19,20 +19,22 @@ class AllView extends Component {
             }
         }
 
-        const emptyContainers = [];
+        const emptyDayContainers = [];
         if (this.props.minWeek !== undefined && this.props.maxWeek !== undefined) {
             for (let i = this.props.minWeek; i <= this.props.maxWeek; i++) {
-                emptyContainers.push(
+                emptyDayContainers.push(
                     <DayContainer 
-                     divId={`week-${i}-header}`} 
-                     divClass={`week-${i} header`}
-                     innerText={i} />)
+                        divId={`week-${i}-header}`} 
+                        divClass={`week-header`}
+                        innerText={i} 
+                    />)
                 for (let j = 0; j < 7; j++) {
-                    emptyContainers.push(
+                    emptyDayContainers.push(
                         <DayContainer 
-                         divId={`week-${i}-day-${j}`} 
-                         divClass={`week-${i} day-${j}`} 
-                         eventsList={eventsByWeekAndDay[i][j]} />)
+                            divId={`week-${i}-day-${j}`} 
+                            divClass={`week-${i} day-${j}`} 
+                            eventsList={eventsByWeekAndDay[i][j]} 
+                         />)
                 }
             }
         }
@@ -40,11 +42,7 @@ class AllView extends Component {
         return (
             <div>
                 <p> All View</p>
-                <div style={{width: '100%',
-                             display: 'grid',
-                             gridTemplateColumns: '0.75fr repeat(7, 1fr)',
-                             gridGap: '10px'
-                }}>
+                <div id="grid">
                     <div>
                         <h2>Week</h2>
                     </div>
@@ -69,7 +67,7 @@ class AllView extends Component {
                     <div>
                         <h2>Saturday</h2>
                     </div>
-                    {emptyContainers}
+                    {emptyDayContainers}
                 {/* {eventsArr}; */}
                 </div>
                 {/* <p> {JSON.stringify(this.props.events)}</p> */}
