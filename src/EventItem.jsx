@@ -18,9 +18,9 @@ class EventItem extends Component {
             <div className='event-item'>
                 <div className='vertical-tag'></div>
                 <div className='contents'>
-                    <h4>{titleText}</h4>
-                    <p>{monthText} {dayText}, {yearText} {startTimeText} - {endTimeText}</p>
-                    <p class='description'>{descriptionText}</p>
+                    <p class='event-title'>{titleText}</p>
+                    <p class='event-time'>{monthText} {dayText}, {yearText} {startTimeText} - {endTimeText}</p>
+                    {/* <p class='description'>{descriptionText}</p> */}
                 </div>
             </div>
         )

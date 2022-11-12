@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
 #grid {
     width: 100%;
     display: grid;
@@ -26,7 +32,10 @@ p.week-header {
     color: #0A0A0A;
     display: flex;
     flex-direction: row;
-    background-color: salmon;
+    // background-color:;
+    background-color: transparentize(orangered, .75);
+    margin: 2px 1px;
+    border-radius: 8px;
 }
 
 .description {
@@ -35,8 +44,28 @@ p.week-header {
 
 .vertical-tag {
     position: relative;
-    width: 10px;
-    background-color: red;
-    opacity: 0.25;
+    width: 4px;
+    background-color: transparentize(orangered, 0.5);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-right: 8px
     // height: 100%;
+}
+
+p.event-title {
+    font-weight: 700;
+    font-size: clamp(12px, 1vw, 18px)
+}
+
+p.event-time {
+    font-size: 11px;
+}
+
+.day-header {
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // background-color: #FAFAFA;
 }

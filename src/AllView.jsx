@@ -43,28 +43,28 @@ class AllView extends Component {
             <div>
                 <p> All View</p>
                 <div id="grid">
-                    <div>
+                    <div className='day-header'>
                         <h2>Week</h2>
                     </div>
-                    <div>
+                    <div className='day-header'>
                         <h2>Sunday</h2>
                     </div>
-                    <div>
+                    <div className='day-header'>
                         <h2>Monday</h2>
                     </div>
-                    <div>
+                    <div className='day-header'>
                         <h2>Tuesday</h2>
                     </div>
-                    <div>
+                    <div className='day-header'>
                         <h2>Wednesday</h2>
                     </div>
-                    <div>
+                    <div className='day-header'>
                         <h2>Thursday</h2>
                     </div>
-                    <div>
+                    <div className='day-header'>
                         <h2>Friday</h2>
                     </div>
-                    <div>
+                    <div className='day-header'>
                         <h2>Saturday</h2>
                     </div>
                     {emptyDayContainers}
