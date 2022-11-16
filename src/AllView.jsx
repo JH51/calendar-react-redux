@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import DayContainer from './DayContainer';
 import './AllView.scss'
+import WeekContainer from './WeekContainer';
 
 class AllView extends Component {
 
@@ -67,9 +68,10 @@ class AllView extends Component {
                     <div className='day-header'>
                         <h2>Saturday</h2>
                     </div>
-                    {emptyDayContainers}
+                    {/* {emptyDayContainers} */}
                 {/* {eventsArr}; */}
                 </div>
+                <WeekContainer />
                 {/* <p> {JSON.stringify(this.props.events)}</p> */}
                 {/* <p> {JSON.stringify(this.props)}</p> */}
             </div>
