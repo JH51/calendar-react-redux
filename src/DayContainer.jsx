@@ -6,7 +6,7 @@ class AllView extends Component {
 
     render() {
 
-        if (this.props.divClass == 'week-header') {
+        if (this.props.divClass === 'week-header') {
             return (
                 <div id={this.props.divId} 
                     className={`day-container ${this.props.divClass}`}
